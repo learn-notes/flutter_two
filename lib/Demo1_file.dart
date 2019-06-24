@@ -92,7 +92,7 @@ class _FileState extends State<FileDemo> {
         return new File(d.path + "/YaSha/download/test1.txt")
             .create(recursive: true)
             .then((File file) {
-          file.writeAsString('往缓存文件中加入数据2').then((File file) {
+          file.writeAsString('往文件中加入数据2').then((File file) {
             print('数据写入完成');
           });
         });

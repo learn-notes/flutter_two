@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Demo1_file.dart';
+import 'Demo2_json.dart';
 import 'LayoutPadding.dart';
 
 void main() => runApp(MyApp());
@@ -48,6 +49,17 @@ class _HomeState extends State<Home> {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => FileDemo()));
+              }),
+        ),
+
+        /// json解析 案例
+        LayoutPadding.Layout(
+          RaisedButton(
+              child: Text('Json解析'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => JsonDemo()));
               }),
         ),
 
