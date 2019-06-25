@@ -75,6 +75,21 @@ var stus = json.decode(stusJsonStr);
 
 ### 3.HTTP网络请求
 
+隐引入三方库
+```
+http: ^0.12.0+2
+```
+以get请求为例
+```
+http.get("https://www.wanandroid.com/project/list/$pager/json?cid=294")
+        .then((http.Response response) {
+      var convertDataToJson = json.decode(response.body);
+      convertDataToJson = convertDataToJson["data"]["datas"];
+      //打印请求的结果
+      print(convertDataToJson);
+    });
+```
+
 ### 4.数据库操作
 引入三方库`sqflite`
 ```
