@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import "package:simple_permissions/simple_permissions.dart";
 
-import 'LayoutPadding.dart';
+import 'utils/LayoutPadding.dart';
+
 
 ///
 /// 文件使用案例

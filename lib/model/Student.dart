@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 ///
 /// 学生实体类
 ///
@@ -19,7 +17,9 @@ class Student {
   }
 
   Student.fromJson(Map<String, dynamic> map)
-      : no = map['no'], cls = map['cls'], name = map['name'];
+      : no = map['no'],
+        cls = map['cls'],
+        name = map['name'];
 
   Map<String, dynamic> toJson() => {
         'no': no,

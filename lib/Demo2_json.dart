@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import 'LayoutPadding.dart';
-import 'Student.dart';
+import 'model/Student.dart';
+import 'utils/LayoutPadding.dart';
 
 ///
 /// Json解析
@@ -75,5 +75,4 @@ class _JsonState extends State<JsonDemo> {
       ),
     );
   }
-
 }
