@@ -74,9 +74,9 @@ class _FileState extends State<FileDemo> {
     try {
       bool exists = await file.exists();
       if (exists) {
-        debugPrint('文件存在');
+        debugPrint('----文件存在----');
       } else {
-        debugPrint('文件不存在');
+        debugPrint('----文件不存在----');
       }
     } catch (e) {
       print(e);
@@ -92,8 +92,8 @@ class _FileState extends State<FileDemo> {
         return new File(d.path + "/YaSha/download/test1.txt")
             .create(recursive: true)
             .then((File file) {
-          file.writeAsString('往文件中加入数据2').then((File file) {
-            print('数据写入完成');
+          file.writeAsString('123456这是添加数据123456').then((File file) {
+            print('----数据写入完成----');
           });
         });
       });
@@ -140,7 +140,7 @@ class _FileState extends State<FileDemo> {
       }
 
       if (readPermission && writePermission) {
-        debugPrint('已有文件读写权限！！！');
+        debugPrint('----已有文件读写权限！！！----');
       }
     }
   }

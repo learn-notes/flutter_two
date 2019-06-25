@@ -18,6 +18,9 @@ class Student {
     return 'Student{no: $no, cls: $cls, name: $name}';
   }
 
+  Student.fromJson(Map<String, dynamic> map)
+      : no = map['no'], cls = map['cls'], name = map['name'];
+
   Map<String, dynamic> toJson() => {
         'no': no,
         'cls': cls,
