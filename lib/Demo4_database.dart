@@ -144,8 +144,8 @@ class _DatabaseState extends State<DatabaseDemo> {
 
     // batch.update('Test', {'name': 'new_item'}, where: 'name = ?', whereArgs: ['item']);
     // batch.delete('Test', where: 'name = ?', whereArgs: ['item']);
+    List results = await batch.commit();
     setState(() {
-      var results = batch.commit().toString();
       _result = '结果：$results';
     });
     await database.close();
@@ -202,7 +202,7 @@ class _DatabaseState extends State<DatabaseDemo> {
   _deleteAll() async {
     Database database = await openDatabase(dbPath);
     int count = await database
-        .rawDelete('DELETE FROM Test WHERE 1 = 1');
+        .rawDelete('DELETE FROM Test');
     await database.close();
     setState(() {
       _result = '删除数据：全部删除成功';
