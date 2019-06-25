@@ -201,7 +201,8 @@ class _DatabaseState extends State<DatabaseDemo> {
   /// 删除表内全部数据
   _deleteAll() async {
     Database database = await openDatabase(dbPath);
-    await database.delete('DELETE FROM Test');
+    int count = await database
+        .rawDelete('DELETE FROM Test WHERE 1 = 1');
     await database.close();
     setState(() {
       _result = '删除数据：全部删除成功';
