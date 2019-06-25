@@ -1,10 +1,10 @@
 # flutter_two
 
-flutter学习笔记（二）
+flutter学习笔记（二）--文件、json、网络请求、数据库
 
 ## 笔记简介
 
-学习flutter文件、存储和网络三个方面过程中写的Demo
+学习flutter文件、json、存储和网络四个方面过程中写的Demo
 
 ### 1.文件读写
 
